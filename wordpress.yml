@@ -1,3 +1,4 @@
+
 - name: Download template
   unarchive:
     src: https://wordpress.org/latest.zip
