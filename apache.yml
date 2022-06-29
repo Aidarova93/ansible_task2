@@ -1,0 +1,7 @@
+- name: Install Apache and unzip
+  yum:
+    name: 
+      - httpd
+      - unzip
+    state: latest
+  notify: Restart Apache

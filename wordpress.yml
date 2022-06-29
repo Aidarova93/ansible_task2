@@ -1,0 +1,14 @@
+- name: Download template
+  unarchive:
+    src: https://wordpress.org/latest.zip
+    dest: /root/
+    remote_src: yes
+
+- name: Move extracted files
+  shell: "rsync -a wordpress/ /var/www/html/ "
+
+- name: Put SELinux in permissive mode
+  selinux:
+    policy: targeted
+    state: permissive
+
